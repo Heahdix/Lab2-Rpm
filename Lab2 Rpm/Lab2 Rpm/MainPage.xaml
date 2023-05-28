@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2_Rpm.MainPage"
+             Title="Главная">
+
+    <StackLayout x:Name="MainPlace">
+        <Label HorizontalOptions="Center"  Text="Онлайн библиотека" FontSize="Title" Padding="30,10,30,0"/>
+
+        <Label  Text="Авторизация" FontSize="20" HorizontalOptions="Center" Padding="30,0,30,0" />
+        <Label  Text="Логин" FontSize="16" Padding="30,0,30,0"/>
+        <Entry x:Name="Login" Keyboard="Text" Margin="30,10,30,10"/>
+        <Label  Text="Пароль" FontSize="16" Padding="30,0,30,0"/>
+        <Entry x:Name="Password" IsPassword="True" Margin="30,10,30,10"/>
+        <Button x:Name="RegButton" BackgroundColor="White" BorderColor="Black" BorderWidth="2" Clicked="RegButton_Clicked" Margin="30,0,30,10" Text="Авторизоваться"/>
+        <Button x:Name="NewUser" BackgroundColor="White" BorderColor="Black" BorderWidth="2" Clicked="NewUser_Clicked" Margin="30,0,30,10" Text="Зарегистрироваться"/>
+    </StackLayout>
+
+</ContentPage>

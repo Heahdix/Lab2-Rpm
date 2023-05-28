@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2_Rpm.Registration">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="MainPlace">
+                <Label HorizontalOptions="Center"  Text="Онлайн библиотека" FontSize="Title" Padding="30,10,30,0"/>
+                <Label  Text="Регистрация" FontSize="20" HorizontalOptions="Center" Padding="30,0,30,0"/>
+                <Label  Text="Логин" FontSize="16" Padding="30,0,30,0"/>
+                <Entry x:Name="Login" Keyboard="Text" Margin="30,10,30,10"/>
+                <Label  Text="Пароль" FontSize="16" Padding="30,0,30,0"/>
+                <Entry x:Name="Password" IsPassword="True" Margin="30,10,30,10" TextChanged="RepeatPassword_Completed"/>
+                <Label  Text="Повторите пароль" FontSize="16" Padding="30,0,30,0"/>
+                <Entry x:Name="RepeatPassword" IsPassword="True" Margin="30,10,30,10" TextChanged="RepeatPassword_Completed"/>
+                <Label x:Name="PasswordNotMatch" TextColor="Red" Padding="30,0,30,0" IsVisible="false" Text="Пароли не совпадают"/>
+                <Label  Text="Выберите дату рождения" FontSize="16" Padding="30,0,30,0"/>
+                <DatePicker x:Name="BirthDate" Margin="30,10,30,10">
+                    <DatePicker.MinimumDate>1/01/1940</DatePicker.MinimumDate>
+                    <DatePicker.MaximumDate>1/01/2010</DatePicker.MaximumDate>
+                </DatePicker>
+                <Label  Text="Введите контактный телефон" FontSize="16" Padding="30,0,30,0"/>
+                <Entry x:Name="Telephone" Keyboard="Telephone" Margin="30,10,30,10"/>
+                <Label  Text="Выберите роль" FontSize="16" Padding="30,0,30,0"/>
+                <Picker x:Name="Role" Margin="30,10,30,10">
+                    <Picker.Items>
+                        <x:String>Клиент</x:String>
+                        <x:String>Библиотекарь</x:String>
+                        <x:String>Администратор</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button x:Name="RegButton" BackgroundColor="White" BorderColor="Black" BorderWidth="2" Clicked="Button_Clicked" Margin="30,0,30,10" Text="Зарегистрироваться"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

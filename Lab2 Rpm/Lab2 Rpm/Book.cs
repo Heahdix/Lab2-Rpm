@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Lab2_Rpm
+{
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Content { get; set; }
+    }
+}
